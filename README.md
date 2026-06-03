@@ -4,6 +4,8 @@
 
 它的角色不是表单收集器，而是一个账号定位专家：通过阶段式提问、概念解释、专业判断和纠偏，帮助用户从模糊的账号想法，逐步推导出可开拍、可验证、可迭代的账号定位。
 
+新版 Skill 已中文化，并加入课程方法论与思考方式参考资料。它不仅记录流程，也要求 AI 学习老师的判断口径：先定价值和用户，再谈人设、竞争优势、类型风格，并用选题验证定位。
+
 ## 使用场景
 
 适合在这些情况下使用：
@@ -48,12 +50,6 @@ Skill 会按照这个顺序一步步推进：
 ## 调用示例
 
 ```text
-Use $self-media-account-positioning to guide me step by step through designing a self-media account positioning.
-```
-
-中文也可以：
-
-```text
 Use $self-media-account-positioning 帮我一步步诊断并设计一个自媒体账号定位
 ```
 
@@ -81,6 +77,7 @@ self-media-account-positioning/
 ├── agents/
 │   └── openai.yaml
 └── references/
-    ├── output-template.md
-    └── question-bank.md
+    ├── 分阶段提问库.md
+    ├── 输出模板.md
+    └── 课程方法论与思考方式.md
 ```
