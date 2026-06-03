@@ -1,0 +1,7 @@
+interface:
+  display_name: "自媒体账号定位教练"
+  short_description: "一步步访谈、判断并设计自媒体账号定位"
+  default_prompt: "Use $self-media-account-positioning to guide me step by step through designing a self-media account positioning."
+
+policy:
+  allow_implicit_invocation: true
