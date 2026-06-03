@@ -39,15 +39,21 @@ Skill 也会解释为什么早期要先压小切口：不是让账号永远做�
 - 通过能力和场景诊断表达方式，而不是让用户凭空选择形式
 - 在用户想不出选题时，先生成候选选题，再判断可执行性
 
-## 安装位置
+## 快速安装
 
-将仓库中的 `self-media-account-positioning/` 目录放入 Codex skills 目录：
+把下面这段话复制给你的 Agent，让它帮你安装：
 
 ```text
-~/.codex/skills/self-media-account-positioning
+请帮我安装这个自媒体账号定位 Skill：
+https://github.com/JennieWei/self-media-account-positioning/tree/main/self-media-account-positioning
+
+要求：
+1. 按照你当前运行环境的 Skill 安装规范安装，不要手动套用别人的本机目录。
+2. 安装的是仓库里的 self-media-account-positioning/ 这个 Skill 目录。
+3. 安装完成后，告诉我是否需要重启或刷新 Agent 才能生效。
 ```
 
-重启 Codex 后即可调用。
+安装完成后，通常需要重启或刷新 Agent，才能在当前环境中识别新 Skill。
 
 ## 调用示例
 
