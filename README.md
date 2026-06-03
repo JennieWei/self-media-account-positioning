@@ -41,19 +41,45 @@ Skill 也会解释为什么早期要先压小切口：不是让账号永远做�
 
 ## 快速安装
 
-把下面这段话复制给你的 Agent，让它帮你安装：
+### 复制给 Agent 的安装指令
 
 ```text
 请帮我安装这个自媒体账号定位 Skill：
 https://github.com/JennieWei/self-media-account-positioning/tree/main/self-media-account-positioning
 
 要求：
-1. 按照你当前运行环境的 Skill 安装规范安装，不要手动套用别人的本机目录。
-2. 安装的是仓库里的 self-media-account-positioning/ 这个 Skill 目录。
+1. 如果是 Codex，请按官方 Skill 发现路径安装：
+   - 用户级：$HOME/.agents/skills/self-media-account-positioning
+   - 仓库级：<repo>/.agents/skills/self-media-account-positioning
+2. 安装的是仓库里的 self-media-account-positioning/ 这个 Skill 目录，不是整个仓库根目录。
 3. 安装完成后，告诉我是否需要重启或刷新 Agent 才能生效。
 ```
 
+### macOS / Linux 一键安装命令
+
+如果你想安装为 Codex 用户级 Skill，可以运行：
+
+```bash
+set -e
+tmpdir="$(mktemp -d)"
+git clone --depth 1 https://github.com/JennieWei/self-media-account-positioning "$tmpdir/repo"
+mkdir -p "$HOME/.agents/skills"
+rm -rf "$HOME/.agents/skills/self-media-account-positioning"
+cp -R "$tmpdir/repo/self-media-account-positioning" "$HOME/.agents/skills/self-media-account-positioning"
+rm -rf "$tmpdir"
+echo "Installed to $HOME/.agents/skills/self-media-account-positioning"
+```
+
 安装完成后，通常需要重启或刷新 Agent，才能在当前环境中识别新 Skill。
+
+### Codex Skill 官方发现路径
+
+Codex 会从这些位置发现 Skill：
+
+- 用户级：`$HOME/.agents/skills`
+- 仓库级：从当前工作目录向上扫描各级 `.agents/skills`
+- 管理员级：`/etc/codex/skills`
+- 系统级：Codex 内置 Skill
 
 ## 调用示例
 
